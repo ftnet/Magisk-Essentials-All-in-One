@@ -24,20 +24,21 @@ Magisk v12 by @topjohnwu
 ## MODULES
 Systemless-BeansGapps-Mini-7.1.x-20170509 by @VR25
 
-Credits go to @The Flash, @BeansTown106, @Surge1223, @BaNkS & others
+	Credits go to @The Flash, @BeansTown106, @Surge1223, @BaNkS & others
 
-Core Google syncing APKs (Google Play Services, SetupWizard, Google Play Store)
+	Core Google syncing APKs (Google Play Services, SetupWizard, Google Play Store)
 
-Core Google libs (`Facelock`, TTS)
+	Core Google libs (`Facelock`, TTS)
 
-Google App
-`Legacy support for swyping on AOSP LatinIME Keyboard`
+	Google App
+	`Legacy support for swyping on AOSP LatinIME Keyboard`
+***
 
-[Removed] LatinIME libs and Facelock (proper systemless implementation of those is a work in progress. I need help with lib symbolic linking)
+	[Removed] LatinIME libs and Facelock (proper systemless implementation of those is a work in progress. I need help with lib symbolic linking)
 
-[Patched] Google Play Services removed from Doze Witelist to save battery by @otonieru
+	[Patched] Google Play Services removed from Doze Witelist to save battery by @otonieru
 
-[Added] Pixel Launcher 7.1.1-3624681
+	[Added] Pixel Launcher 7.1.1-3624681
 ***
 
 
