@@ -19,9 +19,9 @@ Magisk v12 by @topjohnwu
 	Credits go to @The Flash, @BeansTown106, @Surge1223, @BaNkS & others
 	***
 	Core Google syncing APKs (Google Play Services, SetupWizard, Google Play Store)
-	Core Google libs ([STRIKE]Facelock[/STRIKE], TTS)
+	Core Google libs (`Facelock`, TTS)
 	Google App
-	[STRIKE]Legacy support for swyping on AOSP LatinIME Keyboard[/STRIKE]
+	`Legacy support for swyping on AOSP LatinIME Keyboard`
 	***
 	[Removed] LatinIME libs and Facelock (proper systemless implementation of those is a work in progress. I need help with lib symbolic linking)
 	[Patched] Google Play Services removed from Doze Witelist to save battery by @otonieru
