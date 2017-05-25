@@ -1,0 +1,148 @@
+ui_print(" ");
+ui_print("Magisk-Essentials-All-in-One");
+ui_print("Version 2017.05.24");
+ui_print("By VR25");
+ui_print(" ");
+show_progress(12,0);
+set_progress(0);
+ui_print("Preparing Environment...");
+ui_print(" ");
+set_progress(1);
+
+#Mount partitions
+run_program("/sbin/busybox", "mount", "/data");
+run_program("/sbin/busybox", "mount", "/cache");
+set_progress(2);
+
+ui_print("Extracting Files...");
+ui_print(" ");
+package_extract_dir("install", "/tmp/install");
+set_progress(3);
+
+ui_print(">>> Installing Magisk");
+	run_program("/sbin/busybox", "mkdir", "/tmp/magisk");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/magisk.zip", "META-INF/com/google/android/*", "-d", "/tmp/magisk");
+	run_program("/sbin/busybox", "sh", "/tmp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/magisk.zip");	
+set_progress(4);
+
+ui_print(">>> Installing Magisk-Essentials-All-in-One Module Updater");
+	run_program("/sbin/busybox", "mkdir", "/tmp/aio");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/aio.zip", "META-INF/com/google/android/*", "-d", "/tmp/aio");
+	run_program("/sbin/busybox", "sh", "/tmp/aio/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/aio.zip");	
+	
+ui_print(">>> Installing GApps");
+	run_program("/sbin/busybox", "mkdir", "/tmp/gapps");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/gapps.zip", "META-INF/com/google/android/*", "-d", "/tmp/gapps");
+	run_program("/sbin/busybox", "sh", "/tmp/gapps/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/gapps.zip");	
+set_progress(5);
+	
+ui_print(">>> Installing F-Droid Privileged Extension");
+	run_program("/sbin/busybox", "mkdir", "/tmp/fdroid");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/fdroid.zip", "META-INF/com/google/android/*", "-d", "/tmp/fdroid");
+	run_program("/sbin/busybox", "sh", "/tmp/fdroid/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/fdroid.zip");	
+set_progress(6);
+
+ui_print(">>> Installing iOS10 Emoji");
+	run_program("/sbin/busybox", "mkdir", "/tmp/emoji");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/emoji.zip", "META-INF/com/google/android/*", "-d", "/tmp/emoji");
+	run_program("/sbin/busybox", "sh", "/tmp/emoji/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/emoji.zip");		
+set_progress(7);
+
+ui_print(">>> Installing Miracast & Thetering Enabler + ADB Notify Disabler");
+	run_program("/sbin/busybox", "mkdir", "/tmp/miracast");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/miracast.zip", "META-INF/com/google/android/*", "-d", "/tmp/miracast");
+	run_program("/sbin/busybox", "sh", "/tmp/miracast/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/miracast.zip");		
+set_progress(8);
+	
+ui_print(">>> Installing Unified Hosts Adblock");
+    run_program("/sbin/busybox", "mkdir", "/tmp/hosts");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/hosts.zip", "META-INF/com/google/android/*", "-d", "/tmp/hosts");
+	run_program("/sbin/busybox", "sh", "/tmp/hosts/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/hosts.zip");
+set_progress(9);
+	
+ui_print(">>> Installing Universal Deep Buffer Remover");
+    run_program("/sbin/busybox", "mkdir", "/tmp/udbr");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/udbr.zip", "META-INF/com/google/android/*", "-d", "/tmp/udbr");
+	run_program("/sbin/busybox", "sh", "/tmp/udbr/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/udbr.zip");
+set_progress(10);
+	
+ui_print(">>> Installing ViPER4AndroidFX Driver");
+    run_program("/sbin/busybox", "mkdir", "/tmp/viper");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/viper.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper");
+	run_program("/sbin/busybox", "sh", "/tmp/viper/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/viper.zip");
+set_progress(11);
+	
+	
+	
+ui_print(">>> Installing Apps");
+	show_progress(12,0);
+	run_program("/sbin/busybox", "mount", "/data");
+	run_program("/sbin/busybox", "mount", "/cache");
+	set_progress(0);
+	
+	ui_print("Installing app: cf.vojtechh.apkmirror");
+	package_extract_file("cf.vojtechh.apkmirror-eedfab279c7c4ab45ea41d7d4f3bd826.apk", "/data/app/cf.vojtechh.apkmirror-1.apk");
+	set_perm(0, 0, 0644, "/data/app/cf.vojtechh.apkmirror-1.apk");
+	set_progress(1);
+	
+	ui_print("Installing app: org.bramantya.stopcharging");
+	package_extract_file("org.bramantya.stopcharging-535935151ac9166ad7c17a5fd6511042.apk", "/data/app/org.bramantya.stopcharging-1.apk");
+	set_perm(0, 0, 0644, "/data/app/org.bramantya.stopcharging-1.apk");
+	set_progress(2);
+	
+	ui_print("Installing app: org.fdroid.fdroid");
+	package_extract_file("org.fdroid.fdroid-aba34fb45c78e0ca2bfed20b63089461.apk", "/data/app/org.fdroid.fdroid-1.apk");
+	set_perm(0, 0, 0644, "/data/app/org.fdroid.fdroid-1.apk");
+	set_progress(3);
+	
+	ui_print("Installing app: com.lastpass.lpandroid");
+	package_extract_file("com.lastpass.lpandroid-4935e1f38a0ee5e300a6abdba59b4750.apk", "/data/app/com.lastpass.lpandroid-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.lastpass.lpandroid-1.apk");
+	set_progress(4);
+	
+	ui_print("Installing app: com.topjohnwu.magisk");
+	package_extract_file("com.topjohnwu.magisk-857832305ab87b686ccf3c612966f0d5.apk", "/data/app/com.topjohnwu.magisk-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.topjohnwu.magisk-1.apk");
+	set_progress(5);
+	
+	ui_print("Installing app: com.mgoogle.android.gms");
+	package_extract_file("com.mgoogle.android.gms-cec35b72e811218cb066e8a416b57322.apk", "/data/app/com.mgoogle.android.gms-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.mgoogle.android.gms-1.apk");
+	set_progress(6);
+	
+	ui_print("Installing app: com.google.android.ogyoutube");
+	package_extract_file("com.google.android.ogyoutube-02355ad5fadbeeac565c784cc752d651.apk", "/data/app/com.google.android.ogyoutube-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.google.android.ogyoutube-1.apk");
+	set_progress(7);
+	
+	ui_print("Installing app: com.audlabs.viperfx");
+	package_extract_file("com.audlabs.viperfx-b2f08e8dc664606711649b568b10f848.apk", "/data/app/com.audlabs.viperfx-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.audlabs.viperfx-1.apk");
+	set_progress(8);
+
+	ui_print("Installing app: com.google.android.apps.wallpaper");	
+	package_extract_file("com.google.android.apps.wallpaper-5f44e0f6fb114fd21b2e494f567aedce.apk", "/data/app/com.google.android.apps.wallpaper-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.google.android.apps.wallpaper-1.apk");
+	set_progress(9);
+	
+	ui_print("Installing app: com.xda.labs");
+	package_extract_file("com.xda.labs-19e7be6baeaee0ad77bc25cea3a634b0.apk", "/data/app/com.xda.labs-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.xda.labs-1.apk");
+	set_progress(10);
+	
+	ui_print("Installing app: eu.chainfire.lumen");
+	package_extract_file("eu.chainfire.lumen-679fdf7abb8d7670762b1980c5bb6148.apk", "/data/app/eu.chainfire.lumen-1.apk");
+	set_perm(0, 0, 0644, "/data/app/eu.chainfire.lumen-1.apk");
+	set_progress(11);
+	
+	ui_print("Installing app: com.keramidas.TitaniumBackup");
+	package_extract_file("com.keramidas.TitaniumBackup.apk", "/data/app/com.keramidas.TitaniumBackup-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.keramidas.TitaniumBackup-1.apk");
+	set_progress(12);
+	
+	unmount("/data");
+	unmount("/cache");
+
+set_progress(12);
+
+ui_print("All Done. Enjoy!");
