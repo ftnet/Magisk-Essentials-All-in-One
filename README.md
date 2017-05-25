@@ -1,7 +1,7 @@
-Magisk-Essentials-All-in-One v2017.05.24-ARM by @VR25
+## Magisk-Essentials-All-in-One v2017.05.24-ARM by @VR25
 
 
-INFO
+## INFO
 	This mod will instal Magisk v12, followed by other goodies.
 	This is meant to be installed through recovery ONLY.
 	Prior to installing, you must boot your freshly installed OS first.
@@ -10,11 +10,11 @@ INFO
 	As always, do it at your own risk.
 
 	
-ROOT
+## ROOT
 Magisk v12 by @topjohnwu
 
 
-MODULES
+## MODULES
 	Systemless-BeansGapps-Mini-7.1.x-20170509 by @VR25 
 	Credits go to @The Flash, @BeansTown106, @Surge1223, @BaNkS & others
 	***
@@ -36,7 +36,7 @@ MODULES
 	ViPER4Android_FX-v2.5.0.5_systemless by @topjohnwu
 
 	
-USER APPS
+## USER APPS
 	APK Mirror v3.3 by @vojta_horanek
 	CF.Lumen v3.70 by @Chainfire
 	F-Droid v0.103
@@ -51,4 +51,4 @@ USER APPS
 	XDA Labs v1.1.1b
 	
 	
-Thread: https://forum.xda-developers.com/apps/magisk/magisk-xmod-1-0-3-one-massive-t3610313
+**Thread: https://forum.xda-developers.com/apps/magisk/magisk-xmod-1-0-3-one-massive-t3610313**
