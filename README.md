@@ -12,6 +12,7 @@ Prior to installing, you must boot your freshly installed OS.
 Once booted, don't touch anything (don't set things up yet), reboot and install this pack.
 
 If you choose not to boot first, then the included user apps won't be installed (proceed so if you don't want them)
+
 As always, do it at your own risk.
 
 	
