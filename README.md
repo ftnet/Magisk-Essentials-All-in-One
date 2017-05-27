@@ -1,4 +1,4 @@
-## Magisk-Essentials-All-in-One v2017.05.24-ARM by @VR25
+## Magisk-Essentials-All-in-One v2017.5.24-ARM by @VR25
 
 
 
