@@ -25,16 +25,22 @@ ui_print(">>> Installing Magisk");
 	run_program("/sbin/busybox", "sh", "/tmp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/magisk.zip");	
 set_progress(4);
 
-ui_print(">>> Installing Magisk-Essentials-All-in-One Module Updater");
-	run_program("/sbin/busybox", "mkdir", "/tmp/aio");
-	run_program("/sbin/busybox", "unzip", "/tmp/install/aio.zip", "META-INF/com/google/android/*", "-d", "/tmp/aio");
-	run_program("/sbin/busybox", "sh", "/tmp/aio/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/aio.zip");	
+ui_print(">>> Installing Magisk-Essentials-All-in-One Updater");
+	run_program("/sbin/busybox", "mkdir", "/tmp/updater");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/updater.zip", "META-INF/com/google/android/*", "-d", "/tmp/updater");
+	run_program("/sbin/busybox", "sh", "/tmp/updater/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/updater.zip");	
 	
-ui_print(">>> Installing GApps");
+	
+ui_print(">>> Installing MagicGApps");
 	run_program("/sbin/busybox", "mkdir", "/tmp/gapps");
 	run_program("/sbin/busybox", "unzip", "/tmp/install/gapps.zip", "META-INF/com/google/android/*", "-d", "/tmp/gapps");
 	run_program("/sbin/busybox", "sh", "/tmp/gapps/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/gapps.zip");	
+
+	run_program("/sbin/busybox", "mkdir", "/tmp/gapps2");
+	run_program("/sbin/busybox", "unzip", "/tmp/install/gapps2.zip", "META-INF/com/google/android/*", "-d", "/tmp/gapps2");
+	run_program("/sbin/busybox", "sh", "/tmp/gapps2/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/install/gapps2.zip");	
 set_progress(5);
+	
 	
 ui_print(">>> Installing F-Droid Privileged Extension");
 	run_program("/sbin/busybox", "mkdir", "/tmp/fdroid");
@@ -138,6 +144,10 @@ ui_print(">>> Installing Apps");
 	ui_print("Installing app: com.keramidas.TitaniumBackup");
 	package_extract_file("com.keramidas.TitaniumBackup.apk", "/data/app/com.keramidas.TitaniumBackup-1.apk");
 	set_perm(0, 0, 0644, "/data/app/com.keramidas.TitaniumBackup-1.apk");
+	
+	ui_print("Installing app: com.franco.doze");
+	package_extract_file("com.franco.doze-b8d8613ff9bac8c547e5c71f1e94483d.apk", "/data/app/com.franco.doze-1.apk");
+	set_perm(0, 0, 0644, "/data/app/com.franco.doze-1.apk");
 	set_progress(12);
 	
 	unmount("/data");

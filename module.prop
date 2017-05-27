@@ -1,7 +1,7 @@
 id=Magisk-Essentials-All-in-One
 name=Magisk-Essentials-All-in-One
-version=2017.5.24-ARM
-versionCode=2017524
+version=2017.5.26-ARM
+versionCode=2017526
 author=VR25
-description=[ARM][Recovery Install Only] Magisk-Essentials-AIO Massive Systemless Pack for LineageOS/AOSP Based ROMs. For more info check the README.md file inside the zip or visit the official thread on xda: https://forum.xda-developers.com/apps/magisk/magisk-xmod-1-0-3-one-massive-t3610313
+description=[Recovery Install Only] Magisk-Essentials-AIO Massive Systemless Pack for LineageOS/AOSP Based ROMs. For more info check the README.md file inside the zip or visit the official thread on xda: https://forum.xda-developers.com/apps/magisk/magisk-xmod-1-0-3-one-massive-t3610313
 template=3
